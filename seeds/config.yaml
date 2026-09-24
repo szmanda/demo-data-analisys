@@ -1,0 +1,35 @@
+# AromaData Generator Configuration
+# Master configuration for reproducible organic data generation
+
+# Master scale parameter approximating the total volume of generated data:
+# 0.05: micro/test (~15 oils, ~150 customers, ~750 orders)
+# 0.1:  small (~25 oils, ~300 customers, ~1500 orders)
+# 1.0:  medium / production analysis (~250 oils, ~3000 customers, ~15000 orders)
+# 5.0:  large / stress test (~1250 oils, ~15000 customers, ~75000 orders)
+scale: 0.1
+
+# Reproducibility seed for PRNG
+seed: 42
+
+# Historical date range for simulated business activity
+dates:
+  start: "2022-01-01"
+  end: "2024-12-31"
+
+# Power law & distribution parameters
+distributions:
+  pareto_alpha_products: 1.16    # 80/20 product popularity skew
+  pareto_alpha_customers: 1.25   # Repeat buyer loyalty skew
+
+# Target export formats: sqlite, csv, excel, postgres
+formats:
+  - "sqlite"
+  - "csv"
+  - "excel"
+  - "postgres"
+
+paths:
+  csv_dir: "data/raw/csv"
+  excel_dir: "data/raw/excel"
+  sqlite_db: "data/db/olejki.db"
+  postgres_dir: "data/raw/postgres"
