@@ -1,0 +1,399 @@
+bases:
+  - id: 1
+    name: "Olej Jojoba Złoty BIO"
+    type: "Olej nośnikowy"
+    description: "Tłoczony na zimno, stabilny wosk płynny o wysokiej biozgodności ze skórą."
+    cost_per_ml_pln: 0.45
+  - id: 2
+    name: "Olej ze Słodkich Migdałów"
+    type: "Olej nośnikowy"
+    description: "Lekki, uniwersalny olej bazowy, bogaty w witaminy A, D i E."
+    cost_per_ml_pln: 0.22
+  - id: 3
+    name: "Olej z Dzikiej Róży (Rosa Mosqueta)"
+    type: "Olej nośnikowy"
+    description: "Ekskluzywny olej regeneracyjny, bogaty w kwas trans-retinowy."
+    cost_per_ml_pln: 0.85
+  - id: 4
+    name: "Olej Arganowy Deodoryzowany"
+    type: "Olej nośnikowy"
+    description: "Płynne złoto Maroka, silny antyoksydant."
+    cost_per_ml_pln: 0.65
+  - id: 5
+    name: "Alkohol Etylowy Roślinny 96%"
+    type: "Rozpuszczalnik"
+    description: "Czysty spirytus zbożowy farmaceutycznej czystości do perfum i mgiełek."
+    cost_per_ml_pln: 0.12
+  - id: 6
+    name: "Woda Destylowana i Ozonowana"
+    type: "Hydrolat / Baza wodna"
+    description: "Krystalicznie czysta woda demineralizowana."
+    cost_per_ml_pln: 0.02
+  - id: 7
+    name: "Hydrolat z Kwiatu Pomarańczy (Neroli)"
+    type: "Hydrolat"
+    description: "Naturalna woda kwiatowa o relaksującym, cytrusowo-kwiatowym zapachu."
+    cost_per_ml_pln: 0.38
+  - id: 8
+    name: "Olej z Pestek Winogron"
+    type: "Olej nośnikowy"
+    description: "Bardzo lekki olej o szybkiej wchłanialności do masażu i aromaterapii."
+    cost_per_ml_pln: 0.18
+  - id: 9
+    name: "Frakcjonowany Olej Kokosowy (MCT)"
+    type: "Olej nośnikowy"
+    description: "Bezwonny, bezbarwny olej o nieograniczonej trwałości, idealny do roll-onów."
+    cost_per_ml_pln: 0.28
+  - id: 10
+    name: "Hydrolat Lawendowy EKO"
+    type: "Hydrolat"
+    description: "Woda kwiatowa z destylacji lawendy wąskolistnej."
+    cost_per_ml_pln: 0.30
+
+ingredients:
+  - id: 1
+    name: "Lawenda Wąskolistna"
+    latin_name: "Lavandula angustifolia"
+    origin_country: "Francja"
+    scent_note: "serce"
+  - id: 2
+    name: "Drzewo Herbaciane"
+    latin_name: "Melaleuca alternifolia"
+    origin_country: "Australia"
+    scent_note: "głowa"
+  - id: 3
+    name: "Eukaliptus Gałkowy"
+    latin_name: "Eucalyptus globulus"
+    origin_country: "Portugalia"
+    scent_note: "głowa"
+  - id: 4
+    name: "Mięta Pieprzowa"
+    latin_name: "Mentha piperita"
+    origin_country: "Włochy"
+    scent_note: "głowa"
+  - id: 5
+    name: "Bergamotka FCF"
+    latin_name: "Citrus bergamia"
+    origin_country: "Włochy"
+    scent_note: "głowa"
+  - id: 6
+    name: "Pomarańcza Słodka"
+    latin_name: "Citrus sinensis"
+    origin_country: "Brazylia"
+    scent_note: "głowa"
+  - id: 7
+    name: "Cytryna Sycylijska"
+    latin_name: "Citrus limon"
+    origin_country: "Włochy"
+    scent_note: "głowa"
+  - id: 8
+    name: "Paczula Ciemna"
+    latin_name: "Pogostemon cablin"
+    origin_country: "Indonezja"
+    scent_note: "baza"
+  - id: 9
+    name: "Drzewo Cedrowe Atlas"
+    latin_name: "Cedrus atlantica"
+    origin_country: "Maroko"
+    scent_note: "baza"
+  - id: 10
+    name: "Kadzidłowiec (Frankincense)"
+    latin_name: "Boswellia carterii"
+    origin_country: "Oman"
+    scent_note: "baza"
+  - id: 11
+    name: "Róża Damasceńska Absolut"
+    latin_name: "Rosa damascena"
+    origin_country: "Bułgaria"
+    scent_note: "serce"
+  - id: 12
+    name: "Ylang Ylang Extra"
+    latin_name: "Cananga odorata"
+    origin_country: "Madagaskar"
+    scent_note: "serce"
+  - id: 13
+    name: "Rozmaryn Lekarski"
+    latin_name: "Rosmarinus officinalis"
+    origin_country: "Hiszpania"
+    scent_note: "serce"
+  - id: 14
+    name: "Szałwia Muszkatołowa"
+    latin_name: "Salvia sclarea"
+    origin_country: "Francja"
+    scent_note: "serce"
+  - id: 15
+    name: "Drzewo Sandałowe"
+    latin_name: "Santalum album"
+    origin_country: "Indie"
+    scent_note: "baza"
+  - id: 16
+    name: "Geranium Burbońskie"
+    latin_name: "Pelargonium graveolens"
+    origin_country: "Egipt"
+    scent_note: "serce"
+  - id: 17
+    name: "Trawa Cytrynowa (Lemongrass)"
+    latin_name: "Cymbopogon flexuosus"
+    origin_country: "Indie"
+    scent_note: "głowa"
+  - id: 18
+    name: "Cytronela Jawajska"
+    latin_name: "Cymbopogon winterianus"
+    origin_country: "Indonezja"
+    scent_note: "głowa"
+  - id: 19
+    name: "Świerk Czarny"
+    latin_name: "Picea mariana"
+    origin_country: "Kanada"
+    scent_note: "serce"
+  - id: 20
+    name: "Sosna Zwyczajna"
+    latin_name: "Pinus sylvestris"
+    origin_country: "Polska"
+    scent_note: "serce"
+  - id: 21
+    name: "Wetiweria Pachnąca"
+    latin_name: "Vetiveria zizanioides"
+    origin_country: "Haiti"
+    scent_note: "baza"
+  - id: 22
+    name: "Cynamon z Kory"
+    latin_name: "Cinnamomum verum"
+    origin_country: "Sri Lanka"
+    scent_note: "serce"
+  - id: 23
+    name: "Goździk z Pąków"
+    latin_name: "Syzygium aromaticum"
+    origin_country: "Madagaskar"
+    scent_note: "serce"
+  - id: 24
+    name: "Grejpfrut Różowy"
+    latin_name: "Citrus paradisi"
+    origin_country: "USA"
+    scent_note: "głowa"
+  - id: 25
+    name: "Majeranek Słodki"
+    latin_name: "Origanum majorana"
+    origin_country: "Egipt"
+    scent_note: "serce"
+
+tags:
+  - id: 1
+    name: "Relaks i Wyciszenie"
+    category: "Nastrój"
+  - id: 2
+    name: "Głęboki Sen"
+    category: "Zdrowie"
+  - id: 3
+    name: "Koncentracja i Nauka"
+    category: "Umysł"
+  - id: 4
+    name: "Czyste Drogi Oddechowe"
+    category: "Zdrowie"
+  - id: 5
+    name: "Odporność Sezonowa"
+    category: "Zdrowie"
+  - id: 6
+    name: "Antystres"
+    category: "Nastrój"
+  - id: 7
+    name: "Pielęgnacja Cery Trądzikowej"
+    category: "Kosmetyka"
+  - id: 8
+    name: "Anti-Aging i Regeneracja"
+    category: "Kosmetyka"
+  - id: 9
+    name: "Afrodyzjak i Zmysły"
+    category: "Zmysły"
+  - id: 10
+    name: "Medytacja i Joga"
+    category: "Duchowość"
+  - id: 11
+    name: "Naturalna Ochrona Przed Owadami"
+    category: "Ogród i Dom"
+  - id: 12
+    name: "Energia i Pobudzenie"
+    category: "Nastrój"
+  - id: 13
+    name: "Ulga dla Mięśni"
+    category: "Ciało"
+  - id: 14
+    name: "Świeże Powietrze w Domu"
+    category: "Dom"
+  - id: 15
+    name: "Równowaga Emocjonalna"
+    category: "Nastrój"
+
+actions:
+  - id: 1
+    name: "Redukcja poziomu kortyzolu i wyciszenie układu nerwowego"
+    type: "Aromaterapia"
+  - id: 2
+    name: "Ułatwienie zapadania w głęboki sen fazy REM"
+    type: "Lecznicze"
+  - id: 3
+    name: "Działanie antyseptyczne i przeciwbakteryjne"
+    type: "Lecznicze"
+  - id: 4
+    name: "Udrażnianie zatok i dróg oddechowych"
+    type: "Lecznicze"
+  - id: 5
+    name: "Poprawa mikrokrążenia i redukcja napięć mięśniowych"
+    type: "Ciało"
+  - id: 6
+    name: "Wzrost koncentracji, jasności myślenia i czujności"
+    type: "Aromaterapia"
+  - id: 7
+    name: "Normalizacja wydzielania sebum i łagodzenie stanów zapalnych skóry"
+    type: "Kosmetyczne"
+  - id: 8
+    name: "Stymulacja produkcji kolagenu i wygładzenie drobnych zmarszczek"
+    type: "Kosmetyczne"
+  - id: 9
+    name: "Odstraszanie kleszczy, komarów i meszek"
+    type: "Ochronne"
+  - id: 10
+    name: "Neutralizacja nieprzyjemnych zapachów i odświeżanie powietrza"
+    type: "Domowe"
+  - id: 11
+    name: "Łagodzenie bólów głowy i napięcia skroniowego"
+    type: "Lecznicze"
+  - id: 12
+    name: "Stymulacja zmysłów i budowanie intymnej atmosfery"
+    type: "Zmysłowe"
+
+cities:
+  - name: "Warszawa"
+    voivodeship: "Mazowieckie"
+    postal_code_prefix: "00"
+    weight: 0.22
+  - name: "Kraków"
+    voivodeship: "Małopolskie"
+    postal_code_prefix: "30"
+    weight: 0.12
+  - name: "Wrocław"
+    voivodeship: "Dolnośląskie"
+    postal_code_prefix: "50"
+    weight: 0.10
+  - name: "Poznań"
+    voivodeship: "Wielkopolskie"
+    postal_code_prefix: "60"
+    weight: 0.08
+  - name: "Gdańsk"
+    voivodeship: "Pomorskie"
+    postal_code_prefix: "80"
+    weight: 0.08
+  - name: "Łódź"
+    voivodeship: "Łódzkie"
+    postal_code_prefix: "90"
+    weight: 0.07
+  - name: "Katowice"
+    voivodeship: "Śląskie"
+    postal_code_prefix: "40"
+    weight: 0.06
+  - name: "Szczecin"
+    voivodeship: "Zachodniopomorskie"
+    postal_code_prefix: "70"
+    weight: 0.05
+  - name: "Lublin"
+    voivodeship: "Lubelskie"
+    postal_code_prefix: "20"
+    weight: 0.05
+  - name: "Toruń"
+    voivodeship: "Kujawsko-Pomorskie"
+    postal_code_prefix: "87"
+    weight: 0.04
+  - name: "Białystok"
+    voivodeship: "Podlaskie"
+    postal_code_prefix: "15"
+    weight: 0.04
+  - name: "Rzeszów"
+    voivodeship: "Podkarpackie"
+    postal_code_prefix: "35"
+    weight: 0.03
+  - name: "Olsztyn"
+    voivodeship: "Warmińsko-Mazurskie"
+    postal_code_prefix: "10"
+    weight: 0.03
+  - name: "Zakopane"
+    voivodeship: "Małopolskie"
+    postal_code_prefix: "34"
+    weight: 0.01
+  - name: "Sopot"
+    voivodeship: "Pomorskie"
+    postal_code_prefix: "81"
+    weight: 0.01
+  - name: "Kazimierz Dolny"
+    voivodeship: "Lubelskie"
+    postal_code_prefix: "24"
+    weight: 0.01
+
+names:
+  first_names_female:
+    - "Anna"
+    - "Maria"
+    - "Katarzyna"
+    - "Małgorzata"
+    - "Agnieszka"
+    - "Barbara"
+    - "Ewa"
+    - "Magdalena"
+    - "Elżbieta"
+    - "Joanna"
+    - "Aleksandra"
+    - "Monika"
+    - "Zofia"
+    - "Natalia"
+    - "Julia"
+    - "Karolina"
+    - "Marta"
+    - "Paulina"
+    - "Patrycja"
+    - "Wiktoria"
+  first_names_male:
+    - "Piotr"
+    - "Krzysztof"
+    - "Andrzej"
+    - "Tomasz"
+    - "Paweł"
+    - "Jan"
+    - "Michał"
+    - "Marcin"
+    - "Jakub"
+    - "Adam"
+    - "Stanisław"
+    - "Marek"
+    - "Łukasz"
+    - "Grzegorz"
+    - "Mateusz"
+    - "Wojciech"
+    - "Mariusz"
+    - "Dariusz"
+    - "Rafał"
+    - "Maciej"
+  last_names:
+    - "Nowak"
+    - "Kowalska"
+    - "Wiśniewski"
+    - "Wójcik"
+    - "Kowalczyk"
+    - "Kamińska"
+    - "Lewandowski"
+    - "Zielińska"
+    - "Szymański"
+    - "Woźniak"
+    - "Dąbrowski"
+    - "Kozłowska"
+    - "Jankowski"
+    - "Mazur"
+    - "Wojciechowska"
+    - "Kwiatkowski"
+    - "Krawczyk"
+    - "Kaczmarek"
+    - "Piotrowska"
+    - "Grabowski"
+    - "Pawłowska"
+    - "Michalska"
+    - "Nowicka"
+    - "Adamczyk"
+    - "Dudek"
