@@ -1,1 +1,12 @@
-venv/\n__pycache__/\n*.db\n*.csv\n*.xlsx\n.env\ndata/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.db
+*.csv
+*.xlsx
+*.sql
+.env
+data/raw/
+data/db/
