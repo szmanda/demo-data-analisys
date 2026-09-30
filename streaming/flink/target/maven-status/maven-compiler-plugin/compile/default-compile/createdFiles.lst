@@ -1,0 +1,6 @@
+com/aromabank/flink/model/FraudAlertEvent.class
+com/aromabank/flink/FraudDetectionJob$1.class
+com/aromabank/flink/FraudDetectionJob$VelocityAndOutlierFraudDetector.class
+com/aromabank/flink/FraudDetectionJob.class
+com/aromabank/flink/FraudDetectionJob$2.class
+com/aromabank/flink/model/TransactionEvent.class

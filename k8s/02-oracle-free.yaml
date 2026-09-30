@@ -1,0 +1,49 @@
+# #CDC: Oracle 23c Free container deployment for Minikube
+# #CDC: Self-hosted Oracle database with ARCHIVELOG and LogMiner enabled for Debezium CDC.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oracle-free
+  namespace: aromabank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oracle-free
+  template:
+    metadata:
+      labels:
+        app: oracle-free
+    spec:
+      containers:
+        - name: oracle-database
+          image: gvenzl/oracle-free:23-slim-faststart
+          resources:
+            requests:
+              memory: "1024Mi"
+              cpu: "250m"
+            limits:
+              memory: "2048Mi"
+              cpu: "1000m"
+          ports:
+            - containerPort: 1521
+              name: oracle-listener
+          env:
+            - name: ORACLE_PASSWORD
+              value: "OracleSecret2024!"
+            # #CDC: Automatically configure database with archive logging and supplemental logging
+            - name: ENABLE_ARCHIVELOG
+              value: "true"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: oracle-free
+  namespace: aromabank
+spec:
+  selector:
+    app: oracle-free
+  ports:
+    - port: 1521
+      targetPort: 1521
+      name: oracle-listener

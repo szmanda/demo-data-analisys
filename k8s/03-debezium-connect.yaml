@@ -1,0 +1,58 @@
+# #CDC: Debezium Kafka Connect Deployment
+# #CDC: Captures row-level database changes from Oracle LogMiner and publishes to Kafka.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: debezium-connect
+  namespace: aromabank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debezium-connect
+  template:
+    metadata:
+      labels:
+        app: debezium-connect
+    spec:
+      containers:
+        - name: debezium-connect
+          image: quay.io/debezium/connect:2.5
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "150m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8083
+              name: connect-rest
+          env:
+            - name: BOOTSTRAP_SERVERS
+              value: "kafka-kraft:9092"
+            - name: GROUP_ID
+              value: "debezium-cluster"
+            - name: CONFIG_STORAGE_TOPIC
+              value: "debezium_configs"
+            - name: OFFSET_STORAGE_TOPIC
+              value: "debezium_offsets"
+            - name: STATUS_STORAGE_TOPIC
+              value: "debezium_statuses"
+            - name: KEY_CONVERTER
+              value: "org.apache.kafka.connect.json.JsonConverter"
+            - name: VALUE_CONVERTER
+              value: "org.apache.kafka.connect.json.JsonConverter"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: debezium-connect
+  namespace: aromabank
+spec:
+  selector:
+    app: debezium-connect
+  ports:
+    - port: 8083
+      targetPort: 8083
+      name: connect-rest

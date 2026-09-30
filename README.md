@@ -66,9 +66,37 @@ Dane **nie są losowane jednostajnie**, lecz odzwierciedlają realne zachowania 
 
 ---
 
+## ⚡ Big Data Streaming Pipeline (AromaBank Pivot)
+
+Rozszerzenie projektu o architekturę strumieniową Big Data dla sektora finansowo-bankowego. Klienci z AromaData posiadają rachunki bankowe, a zamówienia e-commerce są powiązane z transakcjami finansowymi w czasie rzeczywistym.
+
+### 💳 Szybki start generatora strumieniowego
+Generator jest w pełni parametryczny i pozwala na natychmiastowe testowanie na małych wartościach (bez konieczności uruchamiania chmury czy brokerów):
+
+```bash
+# 1. Szybki test w konsoli (dry-run: 5 zdarzeń/sek przez 3 sekundy)
+./venv/bin/python -m streaming.generator.main --velocity 5 --timeout 3 --mode dry-run
+
+# 2. Zapis do pliku JSON Lines (50 zdarzeń/sek, limit 100 zdarzeń)
+./venv/bin/python -m streaming.generator.main --velocity 50 --max-events 100 --mode file --output-file data/raw/stream.jsonl
+
+# 3. Publikacja do brokera Apache Kafka (z kopertami Debezium #CDC)
+./venv/bin/python -m streaming.generator.main --velocity 20 --timeout 10 --mode kafka --kafka-bootstrap localhost:9092
+```
+
+### 🏛️ Komponenty Architektury
+- **Apache Kafka (KRaft)**: Lekki broker (<300MB RAM, bez Zookeepera) w `k8s/01-kafka-kraft.yaml` lub `docker-compose.stream.yml`.
+- **Change Data Capture (#CDC)**: Samodzielny kontener Oracle 23c Free z włączonym `ARCHIVELOG` i LogMinerem (`cdc/oracle/`).
+- **Apache Flink (Java 17)**: Silnik CEP wykrywający ataki prędkościowe (velocity) oraz anomalie kwotowe w czasie rzeczywistym (`streaming/flink/`).
+- **Databricks & Spark**: Notatniki architektury medalionowej (Bronze -> Silver -> Gold) w `streaming/databricks/`.
+- **Terraform (IaC)**: Wzorce wdrożeniowe dla Azure (Event Hubs, ADLS Gen2, Databricks, Synapse Columnar) i Oracle ADW w `terraform/`.
+- **Self-Hosting (Minikube / Docker Compose)**: Gotowe manifesty K8s w `k8s/` i `docker-compose.stream.yml` do uruchomienia lokalnego bez ponoszenia kosztów chmurowych.
+
+---
+
 ## 🧪 Testy jednostkowe
 
-Projekt posiada pełną baterię testów automatycznych w `tests/`:
+Projekt posiada pełną baterię testów automatycznych (batch + streaming):
 ```bash
 ./venv/bin/pytest -v
 ```

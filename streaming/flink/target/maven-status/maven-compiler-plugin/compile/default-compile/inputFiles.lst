@@ -1,0 +1,3 @@
+/home/michal/Projects/data-analisys/streaming/flink/src/main/java/com/aromabank/flink/model/FraudAlertEvent.java
+/home/michal/Projects/data-analisys/streaming/flink/src/main/java/com/aromabank/flink/FraudDetectionJob.java
+/home/michal/Projects/data-analisys/streaming/flink/src/main/java/com/aromabank/flink/model/TransactionEvent.java

@@ -2,6 +2,27 @@
 
 W tym katalogu możesz zapisywać swoje pliki projektowe (`.ows`) dla Orange Data Mining.
 
+## Jak włączyć orange data mining:
+
+Install and run:
+
+```sh
+# Anaconda
+# Create and activate a conda environment for Orange (optional, but recommended)
+# conda create python=3.11 --yes --name orange3
+set -h
+conda activate orange3
+# install
+# Add conda-forge to the list of channels you can install packages from (and make it default)
+
+# conda config --add channels conda-forge
+# conda config --set channel_priority strict
+# conda install orange3
+# orange-canvas # when the environment is already activated, or even without activating it first, just run: 
+conda run -n orange3 orange-canvas
+```
+
+
 ## Jak wczytać dane do Orange Data Mining:
 1. **Z plików CSV / Excel**:
    - Użyj widgetu **File** w Orange.
